@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.join(__dirname, "/dist"),
-    filename: "index_bundle.js",
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -27,4 +27,9 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 8000
+  }
 };
