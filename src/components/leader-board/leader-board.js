@@ -6,9 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectWinners } from "../../selectors";
 import { getWinners } from "../../actions";
 
-type Props = {};
-
-function Board() {
+function LeaderBoard() {
   const dispatch = useDispatch();
   const winnerList = useSelector(selectWinners);
   useEffect(() => {
@@ -16,15 +14,19 @@ function Board() {
   }, []);
 
   return (
-    <div>
-      <h3>Leader Board</h3>
-      {winnerList.map((item) => (
-        <div key={item.id} className="pb-3">
-          <WinnerItem name={item.winner} date={item.date} />
-        </div>
-      ))}
+    <div className="wrap-board">
+      <h1>
+        <b>Leader Board</b>
+      </h1>
+      <div className="list-container">
+        {winnerList.reverse().map((item) => (
+          <div key={item.id} className="indent-bottom">
+            <WinnerItem name={item.winner} date={item.date} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
-export default Board;
+export default LeaderBoard;

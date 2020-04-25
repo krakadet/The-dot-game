@@ -1,4 +1,20 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
+h1,
+h3 {
+  text-align: center;
+  color: #888888;
+}
+
+.wrap {
+  display: flex;
+  border: 3px solid #eeeeee;
+  border-radius: 5px;
+  margin: 15px;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.divider {
+    border-right: 3px solid #eeeeee;
+    padding: 0 15px;
 }

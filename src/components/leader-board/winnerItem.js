@@ -1,6 +1,7 @@
 // @flow
 import * as React from "react";
 import "./leader-board.css";
+
 type Props = {|
   +name: string,
   +date: string,
@@ -9,7 +10,7 @@ type Props = {|
 function WinnerItem(props: Props) {
   const { date, name } = props;
   return (
-    <div className="container">
+    <div className="container-item">
       <p>{name}</p>
       <p>{date}</p>
     </div>

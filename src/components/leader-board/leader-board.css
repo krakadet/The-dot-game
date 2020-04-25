@@ -1,13 +1,26 @@
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #CFD8DC;
-    color: #9FA8AB ;
-
+.container-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: #cfd8dc;
+  color: #9fa8ab;
+  font-size: 18px;
+  width: 300px;
+  border-radius: 5px;
 }
 
-.pb-3 {
-    padding-bottom: 3px;
+.indent-bottom {
+  padding-bottom: 3px;
+}
+
+.wrap-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-container {
+  max-height: 420px;
+  overflow: hidden;
 }

@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+}
+.wrap-input {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  background-color: #f3f3f3;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: #7b8d93;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.input {
+  background-color: #f3f3f3;
+  color: #8e9ea3;
+  outline: none;
+  border: none;
+}
+
+.flex-1 {
+  flex: 1;
+}

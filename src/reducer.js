@@ -1,8 +1,10 @@
 // @flow
-import { GAME_SETTINGS, WINNERS } from "./actions";
+import { COUNT_GAME, GAME_SETTINGS, WINNERS } from "./actions";
+
 const initialState = {
   gameSettings: {},
   winners: [],
+  countGame: 0
 };
 
 function reducer(
@@ -11,11 +13,20 @@ function reducer(
 ) {
   switch (action.type) {
     case GAME_SETTINGS:
-      return state.gameSettings[action.payload.gameSettings];
+      return {
+        ...state,
+        gameSettings: { ...state.gameSettings, ...action.payload.settings },
+      };
     case WINNERS:
       return {
         ...state,
-        winners: action.payload.winners
+        winners: action.payload.winners,
+      };
+
+    case COUNT_GAME:
+      return {
+        ...state,
+        countGame: action.payload.count,
       };
     default:
       return state;
